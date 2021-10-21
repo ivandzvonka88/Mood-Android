@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_550sdp"
+        android:gravity="center"
+        android:background="@drawable/top_rounded_gray"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_24sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalCommentsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_rounded_bold"
+                android:text="3435 comments"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:padding="@dimen/_5sdp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/closeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="Close"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_100"
+                android:textSize="12sp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="@id/totalCommentsTV"
+                app:layout_constraintBottom_toBottomOf="@id/totalCommentsTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_16sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComments"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/totalCommentsTV"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_100sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:background="@drawable/comment_bg"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:id="@+id/profilePic"
+                    android:src="@drawable/profile_picture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/commentET"
+                    app:layout_constraintStart_toEndOf="@id/profilePic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="Add Comment"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray_200"
+                    android:background="@drawable/rounded_corners_stroke"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_36sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/sendBtn"
+                    android:src="@drawable/send_btn"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/commentET"
+                    app:layout_constraintBottom_toBottomOf="@id/commentET"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_marginVertical="@dimen/_4sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

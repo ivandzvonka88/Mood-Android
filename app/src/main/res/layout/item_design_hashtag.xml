@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:background="@color/gray_400"
+    android:id="@+id/mainLayout">
+
+    <ImageView
+        android:id="@+id/songIV"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hashtag_icon"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/rounder_corner_black_with_white_stroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/songNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:maxLines="1"
+        android:text="#first hashtag"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/singerNameTV"
+        app:layout_constraintTop_toTopOf="@id/songIV"
+        app:layout_constraintStart_toEndOf="@+id/songIV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/singerNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:maxLines="2"
+        android:text="Views 23M"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_200"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songNameTV"
+        app:layout_constraintStart_toEndOf="@+id/songIV"
+        app:layout_constraintBottom_toBottomOf="@id/songIV" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

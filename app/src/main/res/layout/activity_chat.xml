@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatActivity"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/includeView"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="#1AFFFFFF"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/storiesRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingLeft="@dimen/_16sdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/includeView"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/storiesRV"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="#1AFFFFFF"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatListRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/storiesRV"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

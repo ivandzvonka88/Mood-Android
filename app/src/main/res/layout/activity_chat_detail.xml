@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatDetailActivity"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/includeView"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="#1AFFFFFF"/>
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:top_left_corner_radius="25dp"
+        app:top_right_corner_radius="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintTop_toTopOf="@id/bottomView">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/profilePic"
+            android:src="@drawable/attachmet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/commentET"
+            app:layout_constraintBottom_toBottomOf="@id/commentET"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/commentET"
+            app:layout_constraintStart_toEndOf="@id/profilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Add Comment"
+            android:maxLines="1"
+            android:textColor="@color/gray_100"
+            android:textColorHint="@color/gray_200"
+            android:background="@drawable/rounded_corners_stroke"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_36sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/sendBtn"
+            android:src="@drawable/send_btn"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/commentET"
+            app:layout_constraintBottom_toBottomOf="@id/commentET"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_4sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

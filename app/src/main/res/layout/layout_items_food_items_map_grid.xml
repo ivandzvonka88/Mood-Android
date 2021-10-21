@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/mainIV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_6sdp" />
+
+    <!--    app:riv_mutate_background="true"-->
+    <!--    app:riv_oval="false"-->
+    <!--    app:riv_tile_mode="clamp"-->
+
+    <ImageView
+        android:id="@+id/bookmarkIV"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/pink_save_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:scaleType="centerCrop"
+        android:src="#33000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_6sdp" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:maxLines="1"
+        android:text="@string/mort_ikol"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/mainIV"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srb_clearRatingEnabled="false"
+        app:srb_clickable="false"
+        app:srb_drawableEmpty="@drawable/activity"
+        app:srb_drawableFilled="@drawable/star_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="5"
+        app:srb_rating="4"
+        app:srb_scrollable="false"
+        app:srb_starHeight="10dp"
+        app:srb_starWidth="10dp"
+        app:srb_starPadding="2dp"
+        app:srb_stepSize="0.5"
+        app:layout_constraintStart_toStartOf="@+id/mainIV"
+        app:layout_constraintBottom_toBottomOf="@+id/mainIV"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"/>
+
+    <ImageView
+        android:id="@+id/mediaIV"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_1sdp"
+        android:src="@drawable/play_icon_gray"
+        app:layout_constraintTop_toTopOf="@id/mainIV"
+        app:layout_constraintStart_toStartOf="@id/mainIV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mediaTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:maxLines="1"
+        android:text="1.5M"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/mediaIV"
+        app:layout_constraintStart_toEndOf="@id/mediaIV"
+        app:layout_constraintTop_toTopOf="@id/mediaIV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

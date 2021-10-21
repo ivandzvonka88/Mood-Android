@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ActivityFragment"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/includeView"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/activity1"
+                    layout="@layout/layout_items_activity" />
+
+                <include
+                    android:id="@+id/activity2"
+                    layout="@layout/layout_items_activity" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#1AFFFFFF"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="Today"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_200"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"/>
+
+                <include
+                    android:id="@+id/notification1"
+                    layout="@layout/layout_items_notifications" />
+
+                <include
+                    android:id="@+id/notification2"
+                    layout="@layout/layout_items_notifications" />
+
+                <include
+                    android:id="@+id/notification3"
+                    layout="@layout/layout_items_notifications" />
+
+                <include
+                    android:id="@+id/notification4"
+                    layout="@layout/layout_items_notifications" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeTV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="Yesterday"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_200"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"/>
+
+                <include
+                    android:id="@+id/notification5"
+                    layout="@layout/layout_items_activity" />
+
+                <include
+                    android:id="@+id/notification6"
+                    layout="@layout/layout_items_notifications" />
+
+                <include
+                    android:id="@+id/notification7"
+                    layout="@layout/layout_items_activity" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

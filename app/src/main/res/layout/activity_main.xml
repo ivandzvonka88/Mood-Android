@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/mainFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:top_left_corner_radius="25dp"
+        app:top_right_corner_radius="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="@id/bottomNavigation"
+        app:layout_constraintTop_toTopOf="@id/bottomNavigation">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:id="@+id/bottomNavigation"
+        android:background="@drawable/gradient_bottom_nav"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemTextColor="@color/bottom_nav_icon_color_selector"
+        app:itemIconSize="@dimen/_16sdp"
+        app:itemIconTint="@color/bottom_nav_icon_color_selector"
+        app:menu="@menu/bottom_navigation_menu"
+        app:theme="@style/BottomNavigationTheme"
+        android:paddingVertical="@dimen/_2sdp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/postBtn"
+        android:src="@drawable/post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomNavigation"
+        app:layout_constraintBottom_toBottomOf="@id/bottomNavigation"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:elevation="@dimen/_10sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

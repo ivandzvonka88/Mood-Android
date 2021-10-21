@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_10ssp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:lineSpacingExtra="@dimen/_6sdp"
+                android:text="Interactions"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_11ssp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/likesCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Likes"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="true"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/commentsCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Comments"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="false"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newFollowersCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="New Followers"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="false"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mentionsCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Mentions"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="false"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_10ssp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:lineSpacingExtra="@dimen/_6sdp"
+                android:text="Messages"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_11ssp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/directMessagesCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Direct Messages"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="true"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_10ssp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:lineSpacingExtra="@dimen/_6sdp"
+                android:text="Video Updates"
+                android:textColor="@color/gray_200"
+                android:textSize="@dimen/_11ssp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/videoAaccountsCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Video from accounts you follow"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="true"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/videoSuggestionsCL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:autoSizeMaxTextSize="@dimen/_13ssp"
+                    android:autoSizeMinTextSize="@dimen/_12ssp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center_vertical"
+                    android:text="Video Suggestions"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rm.rmswitch.RMSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checked="false"
+                    app:enabled="true"
+                    app:forceAspectRatio="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchBkgCheckedColor="@color/pink_600"
+                    app:switchBkgNotCheckedColor="@color/gray_500"
+                    app:switchDesign="android"
+                    app:switchToggleCheckedColor="@color/pink_300"
+                    app:switchToggleNotCheckedColor="@color/gray_200" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

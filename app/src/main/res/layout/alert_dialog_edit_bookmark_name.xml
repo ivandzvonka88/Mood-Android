@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_20sdp"
+        android:backgroundTint="@color/gray_300"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/gray_300"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_8sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:paddingStart="@dimen/_10ssp"
+                android:text="Bookmark Name"
+                android:textColor="@color/gray_100"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="Enter new bookmark name in the field below"
+                android:textColor="@color/gray_100"
+                android:textSize="14sp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke_small"
+                android:hint="New bookmark name"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/cursor_bg"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_10sdp"
+                android:textSize="12sp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray_600"
+                app:layout_constraintTop_toBottomOf="@+id/includeView" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:background="@color/gray_300"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cancelBT"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:text="Cancel"
+                    android:gravity="center"
+                    android:textColor="@color/gray_100"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/saveBT"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textSize="16sp"
+                    android:textColor="@color/pink_300" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

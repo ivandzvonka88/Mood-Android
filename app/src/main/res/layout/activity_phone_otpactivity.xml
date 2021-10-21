@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeView"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/enterConfirmationCodeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:text="Enter confirmation code"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/phoneCl" />
+
+        <TextView
+            android:id="@+id/verificationCodeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Please, enter confirmation code, that we send to your mobile phone"
+            android:textColor="@color/gray_200"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterConfirmationCodeTV" />
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink_300"
+            app:box_margin="@dimen/_2sdp"
+            app:height="@dimen/_40sdp"
+            app:hide_otp="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verificationCodeTV"
+            app:length="6"
+            app:otp="123456"
+            app:otp_text_size="24sp"
+            app:width="@dimen/_40sdp"
+            app:otp_box_background="@drawable/rounder_corner_black_with_white_stroke"/>
+
+        <TextView
+            android:id="@+id/confirmBT"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:background="@drawable/pink_button_bg"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Confirm"
+            android:textColor="@color/gray_100"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otp_view"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:id="@+id/resendTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Resend"
+            android:textColor="@color/yellow_300"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmBT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

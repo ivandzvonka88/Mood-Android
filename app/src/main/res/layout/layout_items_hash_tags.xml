@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_400"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingTop="@dimen/_4sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hashTagTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:text="#first hashtag "
+        android:textAlignment="textStart"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ViewsTV"
+        app:layout_constraintBottom_toBottomOf="@+id/ViewsTV"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fireIV"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:src="@drawable/fire"
+        app:layout_constraintStart_toEndOf="@+id/hashTagTV"
+        app:layout_constraintTop_toTopOf="@+id/hashTagTV"
+        app:layout_constraintBottom_toBottomOf="@+id/hashTagTV"
+        android:layout_marginStart="@dimen/_4sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ViewsTV"
+        android:background="@drawable/rounder_corner_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:textSize="12sp"
+        android:text="194M"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintEnd_toEndOf="@+id/ViewsTV"
+        app:layout_constraintTop_toTopOf="@+id/ViewsTV"
+        app:layout_constraintBottom_toBottomOf="@+id/ViewsTV"
+        android:layout_marginEnd="@dimen/_6sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodItemsRV"
+        app:layout_constraintTop_toBottomOf="@+id/ViewsTV"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingTop="@dimen/_1sdp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_8sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

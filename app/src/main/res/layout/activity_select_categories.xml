@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400"
+    android:layout_gravity="center">
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+    <TextView
+        android:id="@+id/skipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/avenir"
+        android:text="Skip"
+        android:textColor="@color/pink_300"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/includeView"
+        app:layout_constraintTop_toTopOf="@id/includeView"
+        app:layout_constraintBottom_toBottomOf="@id/includeView"
+        />
+    <TextView
+        android:id="@+id/selectTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/avenir"
+        android:text="Select categories\nthat interest you"
+        android:textColor="@color/gray_100"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:fillViewport="true"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/completeBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectTV" />
+    <TextView
+        android:id="@+id/completeBT"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:background="@drawable/pink_button_bg"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="Complete Registration"
+        android:textColor="@color/gray_100"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

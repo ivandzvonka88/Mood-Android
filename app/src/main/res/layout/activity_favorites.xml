@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <View
+        android:id="@+id/lineView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/gray_50"
+        app:layout_constraintTop_toBottomOf="@id/includeView" />
+
+    <LinearLayout
+        android:id="@+id/myVideoLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineView1"
+      >
+
+
+        <TextView
+            android:id="@+id/burgerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Burgers"
+            android:textColor="@color/pink_300"
+            android:textSize="12sp" />
+        <View
+            android:id="@+id/lineView2"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/gray_50"/>
+        <TextView
+            android:id="@+id/mexicanTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Mexican Eats"
+            android:textColor="@color/gray_200"
+            android:textSize="12sp" />
+        <View
+            android:id="@+id/lineView3"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/gray_50"/>
+        <TextView
+            android:id="@+id/lASportsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="LA Spots"
+            android:textColor="@color/gray_200"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+
+
+    <View
+        android:id="@+id/lineView4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray_50"
+        app:layout_constraintTop_toBottomOf="@id/myVideoLL" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingLeft="@dimen/_10sdp"
+        android:id="@+id/foodItemsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myVideoLL" />
+</androidx.constraintlayout.widget.ConstraintLayout>

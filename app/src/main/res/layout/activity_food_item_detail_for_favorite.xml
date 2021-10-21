@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/recycler_image6"
+        android:scaleType="centerCrop"/>
+
+
+
+
+
+    <ImageView
+        android:id="@+id/backIV"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/back_icon"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--        android:id="@+id/viewPager"-->
+
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"/>-->
+
+
+
+    <!--    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--        android:id="@+id/backIV"-->
+    <!--        android:layout_width="@dimen/_20sdp"-->
+    <!--        android:layout_height="@dimen/_14sdp"-->
+    <!--        android:layout_marginStart="@dimen/_12sdp"-->
+    <!--        android:layout_marginTop="@dimen/_12sdp"-->
+    <!--        android:src="@drawable/back"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:top_left_corner_radius="25dp"
+        app:bottom_left_corner_radius="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bluryView"
+        app:layout_constraintStart_toStartOf="@id/bluryView"
+        app:layout_constraintEnd_toEndOf="@id/bluryView"
+        app:layout_constraintTop_toTopOf="@id/bluryView">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/songDetailsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_65sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:text="Singer name - Song name "
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:textSize="14sp"
+        android:text="Name of video, #first, #second, #t.."
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/songDetailsTV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@id/descriptionTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srb_clearRatingEnabled="false"
+        app:srb_clickable="false"
+        app:srb_drawableEmpty="@drawable/activity"
+        app:srb_drawableFilled="@drawable/star_filled"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="5"
+        app:srb_rating="4"
+        app:srb_scrollable="false"
+        app:srb_starHeight="10dp"
+        app:srb_starPadding="2dp"
+        app:srb_starWidth="10dp"
+        app:srb_stepSize="0.5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:maxLines="1"
+        android:text="@string/mort_ikol"
+        android:textAlignment="textStart"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintStart_toStartOf="@id/ratingBar" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bluryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingTop="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_24sdp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.70">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:src="@drawable/profile_picture2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/likeIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profilePic"
+            android:orientation="vertical"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:src="@drawable/like"
+                android:id="@+id/hartIV"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/likesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="854,2k"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likeIV"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/comment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="3452"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shareIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/commentIV"
+            android:orientation="vertical"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/share"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shareTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="Share"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/musicIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shareIV"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/music"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/musicTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="Music"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locationIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/musicIV"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/location"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="Location"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/_50sdp"-->
+    <!--        style="@style/CustomCardViewStyle"-->
+    <!--        app:cardPreventCornerOverlap="true"-->
+    <!--        android:padding="0dp"-->
+    <!--        app:cardBackgroundColor="@color/transparent"-->
+    <!--        android:background="@drawable/gradient_bottom_nav"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+
+    <!-- Add your target layout here -->
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:id="@+id/blureRRL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:top_left_corner_radius="25dp"
+        app:top_right_corner_radius="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintTop_toTopOf="@id/bottomView">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/attachedFilePic"
+            android:src="@drawable/attachmet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/commentET"
+            app:layout_constraintBottom_toBottomOf="@id/commentET"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/commentET"
+            app:layout_constraintStart_toEndOf="@id/attachedFilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Add Comment"
+            android:maxLines="1"
+            android:textColor="@color/gray_100"
+            android:textColorHint="@color/gray_200"
+            android:background="@drawable/rounded_corners_stroke"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_36sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/sendBtn"
+            android:src="@drawable/send_btn"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/commentET"
+            app:layout_constraintBottom_toBottomOf="@id/commentET"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_4sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

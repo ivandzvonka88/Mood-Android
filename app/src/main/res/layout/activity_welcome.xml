@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <TextView
+        android:id="@+id/welcomeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:fontFamily="@font/avenir"
+        android:text="Welcome to"
+        android:textColor="@color/gray_100"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTV"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/joinTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:text="Join a large community of\nfood lovers"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIV" />
+
+    <TextView
+        android:id="@+id/enterPhoneOrEmailTV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="enter phone number or email"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/signInWithGoogleTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinTV"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/user_icon"
+        app:layout_constraintBottom_toBottomOf="@id/enterPhoneOrEmailTV"
+        app:layout_constraintStart_toStartOf="@id/enterPhoneOrEmailTV"
+        app:layout_constraintTop_toTopOf="@id/enterPhoneOrEmailTV" />
+
+    <TextView
+        android:id="@+id/signInWithGoogleTV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="sign in with Google"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/signInWithFacebookTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPhoneOrEmailTV"
+        app:layout_constraintWidth_percent="0.8" />
+    <ImageView
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/google_icon"
+        app:layout_constraintBottom_toBottomOf="@id/signInWithGoogleTV"
+        app:layout_constraintStart_toStartOf="@id/signInWithGoogleTV"
+        app:layout_constraintTop_toTopOf="@id/signInWithGoogleTV" />
+    <TextView
+        android:id="@+id/signInWithFacebookTV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="sign in with Facebook"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/signInWithTwitterTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInWithGoogleTV"
+        app:layout_constraintWidth_percent="0.8" />
+    <ImageView
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/facebook_icon"
+        app:layout_constraintBottom_toBottomOf="@id/signInWithFacebookTV"
+        app:layout_constraintStart_toStartOf="@id/signInWithFacebookTV"
+        app:layout_constraintTop_toTopOf="@id/signInWithFacebookTV" />
+    <TextView
+        android:id="@+id/signInWithTwitterTV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="sign in with Twitter"
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/policyTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInWithFacebookTV"
+        app:layout_constraintWidth_percent="0.8" />
+    <ImageView
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/twitter_icon"
+        app:layout_constraintBottom_toBottomOf="@id/signInWithTwitterTV"
+        app:layout_constraintStart_toStartOf="@id/signInWithTwitterTV"
+        app:layout_constraintTop_toTopOf="@id/signInWithTwitterTV" />
+
+    <TextView
+        android:id="@+id/policyTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_6sdp"
+        android:text="By using this application, you agree to the Terms and Conditions and Privacy Policy"
+        android:textColor="@color/gray_100"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/signInTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/haveAccountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:text="Already have account? "
+        android:textColor="@color/gray_100"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signInTV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signInTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:autoSizeMaxTextSize="@dimen/_12ssp"
+        android:autoSizeMinTextSize="@dimen/_10ssp"
+        android:fontFamily="@font/gotham_rounded_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:text=" Sign In"
+        android:textColor="@color/pink_300"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/haveAccountTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

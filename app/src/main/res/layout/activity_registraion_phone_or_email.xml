@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toggleCl"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/rounder_corner_light_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeView"
+        app:layout_constraintWidth_percent="0.85">
+
+        <TextView
+            android:id="@+id/togglePhoneNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:background="@drawable/rounder_corner_pink"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Phone Number"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.49" />
+
+        <TextView
+            android:id="@+id/toggleEmailTV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:background="@drawable/rounder_corner_light_black"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Email"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.49" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneCl"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleCl"
+        app:layout_constraintWidth_percent="0.85">
+
+        <TextView
+            android:id="@+id/enterPhoneNumberTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:text="Enter Phone Number"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/phoneCl" />
+
+        <TextView
+            android:id="@+id/verificationCodeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="We will send an SMS with a verification code. SMS fees may apply."
+            android:textColor="@color/gray_200"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterPhoneNumberTV" />
+
+        <View
+            android:id="@+id/countryAndNumberView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verificationCodeTV" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/country_code_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:clickable="true"
+            android:focusable="true"
+            app:ccpDialog_backgroundColor="@color/gray_400"
+            app:ccpDialog_textColor="@color/gray_100"
+            app:ccp_contentColor="@color/gray_100"
+            app:ccp_hintExampleNumber="true"
+            app:ccp_hintExampleNumberType="MOBILE"
+            app:ccp_showNameCode="true"
+            app:ccp_showPhoneCode="true"
+            app:ccp_showFlag="false"
+            app:ccp_textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/countryAndNumberView"
+            app:layout_constraintStart_toStartOf="@id/countryAndNumberView"
+            app:layout_constraintTop_toTopOf="@id/countryAndNumberView" />
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/rounder_corner_light_black"
+            app:layout_constraintBottom_toBottomOf="@id/countryAndNumberView"
+            app:layout_constraintStart_toEndOf="@id/country_code_picker"
+            app:layout_constraintTop_toTopOf="@id/countryAndNumberView" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="123 123 123"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_100"
+            android:textSize="14sp"
+            android:textColorHint="@color/gray_100"
+            android:background="@color/gray_400"
+            android:fontFamily="@font/gotham_rounded_medium"
+            app:layout_constraintBottom_toBottomOf="@id/countryAndNumberView"
+            app:layout_constraintStart_toEndOf="@id/lineView"
+            app:layout_constraintTop_toTopOf="@id/countryAndNumberView"
+            app:layout_constraintEnd_toEndOf="@id/countryAndNumberView"/>
+
+        <TextView
+            android:id="@+id/sendCondePhoneNumberBT"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:autoSizeMaxTextSize="@dimen/_12ssp"
+            android:autoSizeMinTextSize="@dimen/_10ssp"
+            android:background="@drawable/pink_button_bg"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Send a Code"
+            android:textColor="@color/gray_100"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countryAndNumberView"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emailCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleCl"
+        app:layout_constraintWidth_percent="0.85"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/enterEmailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:text="Enter Email Address"
+            android:textColor="@color/gray_100"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/emailCl" />
+
+        <TextView
+            android:id="@+id/verificationEmailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="We will email you a code to verify your updated email address"
+            android:textColor="@color/gray_200"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterEmailTV" />
+
+        <View
+            android:id="@+id/emailView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/rounder_corner_black_with_white_stroke_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verificationEmailTV" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="email.address@gmail.com"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_100"
+            android:textSize="14sp"
+            android:textColorHint="@color/gray_100"
+            android:background="@color/gray_400"
+            android:fontFamily="@font/gotham_rounded_medium"
+            app:layout_constraintBottom_toBottomOf="@id/emailView"
+            app:layout_constraintTop_toTopOf="@id/emailView"
+            app:layout_constraintStart_toStartOf="@id/emailView"
+            app:layout_constraintEnd_toEndOf="@id/emailView"/>
+
+        <TextView
+            android:id="@+id/sendCondeEmailBT"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:autoSizeMaxTextSize="@dimen/_12ssp"
+            android:autoSizeMinTextSize="@dimen/_10ssp"
+            android:background="@drawable/pink_button_bg"
+            android:fontFamily="@font/gotham_rounded_medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:text="Send a Code"
+            android:textColor="@color/gray_100"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailView"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_400">
+
+    <include
+        android:id="@+id/includeView"
+        layout="@layout/include_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/profile_picture2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/editIV"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/edit_icon"
+                app:layout_constraintBottom_toBottomOf="@id/profilePic"
+                app:layout_constraintEnd_toStartOf="@id/profilePic"
+                app:layout_constraintTop_toTopOf="@id/profilePic" />
+
+            <ImageView
+                android:id="@+id/saveIV"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/pink_save_icon"
+                app:layout_constraintBottom_toBottomOf="@id/profilePic"
+                app:layout_constraintStart_toEndOf="@id/profilePic"
+                app:layout_constraintTop_toTopOf="@id/profilePic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:maxLines="1"
+                android:text="erica_martin"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_100"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profilePic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cityNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:maxLines="1"
+                android:text="Orlando, FL"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_100"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userNameTV" />
+
+            <LinearLayout
+                android:id="@+id/followingLL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/followersLL"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cityNameTV"
+                app:layout_constraintWidth_percent="0.23"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="345"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/pink_300"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="Following"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_200"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/followersLL"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/likeLL"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/followingLL"
+                app:layout_constraintTop_toBottomOf="@id/cityNameTV"
+                app:layout_constraintWidth_percent="0.23">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="8.6M"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/pink_300"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="Followers"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_200"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/likeLL"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounder_corner_black_with_white_stroke"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/followersLL"
+                app:layout_constraintTop_toBottomOf="@id/cityNameTV"
+                app:layout_constraintWidth_percent="0.23">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="41.2M"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/pink_300"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:maxLines="1"
+                    android:text="Likes"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_200"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/detailTV"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.85"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:text="She became known for his short comedy skits where he sarcastically points out people who complicate simple tasks for no reason at all. "
+                android:gravity="center"
+                android:textColor="@color/gray_100"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/followersLL" />
+
+            <View
+                android:id="@+id/lineView1"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray_50"
+                app:layout_constraintTop_toBottomOf="@id/detailTV"/>
+
+            <LinearLayout
+                android:id="@+id/myVideoLL"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.48"
+                android:layout_height="@dimen/_35sdp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineView1">
+                <ImageView
+                    android:id="@+id/myVideoIV"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/video_icon"/>
+                <TextView
+                    android:id="@+id/myVideoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:text="My videos"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/pink_300"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/lineView2"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@color/gray_50"
+                app:layout_constraintTop_toBottomOf="@id/lineView1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/lineView3"/>
+            <LinearLayout
+                android:id="@+id/likeVideoLL"
+                android:layout_width="0dp"
+                android:gravity="center"
+                app:layout_constraintWidth_percent="0.48"
+                android:layout_height="@dimen/_35sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineView1">
+                <ImageView
+                    android:id="@+id/likeVideoIV"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/thumb_icon"/>
+                <TextView
+                    android:id="@+id/likeVideoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:fontFamily="@font/gotham_rounded_medium"
+                    android:text="Liked videos"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/gray_200"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/lineView3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray_50"
+                app:layout_constraintTop_toBottomOf="@id/myVideoLL"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/lineView3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/foodItemsRV"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_56sdp"
+                android:layout_marginTop="@dimen/_12sdp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_520sdp"
+        android:background="@drawable/top_rounded_gray"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_24sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_rounded_bold"
+                android:padding="@dimen/_5sdp"
+                android:text="Direct Share"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/closeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="Close"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_100"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/titleTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/titleTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/doneTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="Done"
+                android:textAlignment="textStart"
+                android:textColor="@color/yellow_300"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/titleTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/titleTV" />
+
+            <View
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/lineV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray_50"
+                app:layout_constraintTop_toBottomOf="@id/titleTV"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/messagesRV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/sendBT"
+                app:layout_constraintTop_toBottomOf="@id/lineV" />
+            <TextView
+                android:id="@+id/sendBT"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_10ssp"
+                android:background="@drawable/pink_button_bg"
+                android:fontFamily="@font/gotham_rounded_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_6sdp"
+                android:text="Send"
+                android:textColor="@color/gray_100"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
